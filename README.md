@@ -105,4 +105,6 @@ On page load, the profile is fetched if a valid token exists.
 Protected routes are handled via ProtectedRoute.jsx.
 
 📸 Screenshots
-(Add screenshots of your UI here)
+![Screenshot description](/screenshot-1.png)
+![Screenshot description](/screenshot-2.png)
+
