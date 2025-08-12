@@ -107,6 +107,6 @@ Backend uses JWT verification middleware before granting access to protected rou
 ## 📸 Screenshots
 
 ### 🏠 Dashboard
-![Login Screenshot](./Screenshot-1.png)
-![Dashboard Screenshot](./Screenshot-2.png)
+![Login Screenshot](Screenshot-1.png)
+![Dashboard Screenshot](Screenshot-2.png)
 
