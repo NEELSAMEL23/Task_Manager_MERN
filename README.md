@@ -104,15 +104,7 @@ On refresh, token is validated and profile fetched.
 Backend uses JWT verification middleware before granting access to protected routes.
 
 
-## 📸 Screenshots
 
-### 🔑 Login Page
-![Login Screenshot](https://raw.githubusercontent.com/NEELSAMEL23/Task_Manager_MERN/main/Screenshot-1.png)
-
-### 📊 Dashboard
-![Dashboard Screenshot](https://raw.githubusercontent.com/NEELSAMEL23/Task_Manager_MERN/main/Screenshot-2.png)
-
-![Login Image](Screenshot-1.png)
 
 
 
