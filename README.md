@@ -29,7 +29,7 @@ This application allows users to **register, log in, create, edit, and delete ta
 - Axios (API calls)
 - React Router DOM (Routing)
 
-**Backend** *(Not included in this repo)*
+**Backend** 
 - Node.js
 - Express.js
 - MongoDB + Mongoose
