@@ -103,4 +103,10 @@ Frontend stores token & user in localStorage via AuthContext.
 On refresh, token is validated and profile fetched.
 Backend uses JWT verification middleware before granting access to protected routes.
 
-📸 Screenshots
+
+## 📸 Screenshots
+
+### 🏠 Dashboard
+![Login Screenshot](./Screenshot-1.png)
+![Dashboard Screenshot](./Screenshot-2.png)
+
