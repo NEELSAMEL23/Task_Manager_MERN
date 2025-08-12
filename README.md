@@ -4,6 +4,10 @@ A responsive **Task Manager** frontend built with **React** and **Tailwind CSS**
 This application allows users to **register, log in, create, edit, and delete tasks** with a clean and modern UI.
 
 ---
+## 🌐 Live Demo
+
+[🚀 **Try the Live App**](https://task-manager-mern-flame.vercel.app)  
+_Deployed and ready to use!_
 
 ## 🚀 Features
 
