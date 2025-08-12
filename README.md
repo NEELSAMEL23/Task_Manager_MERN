@@ -95,7 +95,7 @@ src/
   Set up environment variables
   Create a .env file in the frontend folder and configure:
 
-  VITE_API_BASE_URL= http://localhost:5000/api](https://task-manager-mern-a90b.onrender.com)
+  VITE_API_BASE_URL= https://task-manager-mern-a90b.onrender.com
   Start the development server
   npm run dev
 
