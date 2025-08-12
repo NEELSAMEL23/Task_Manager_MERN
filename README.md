@@ -7,7 +7,7 @@ This application allows users to **register, log in, create, edit, and delete ta
 ## 🌐 Live Demo
 
 [🚀 **Try the Live App**](https://task-manager-mern-flame.vercel.app)  
-_Deployed and ready to use!_
+
 
 ## 🚀 Features
 
