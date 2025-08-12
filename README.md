@@ -93,14 +93,9 @@ npm start
 cd frontend
 npm install
 Create .env in frontend/:
-
-
 VITE_API_BASE_URL=https://task-manager-mern-a90b.onrender.com
-Run frontend:
 
-bash
-Copy
-Edit
+Run frontend:
 npm run dev
 
 🔑 Authentication Flow
