@@ -1,17 +1,19 @@
-export const BASEURL = "http://localhost:8000";
+// src/config/apiPaths.js
+
+export const BASEURL = import.meta.env.VITE_API_URL || "http://localhost:8080";
 
 export const API_PATHS = {
     AUTH: {
-        REGISTER: "/api/auth/register",
-        LOGIN: "/api/auth/login",
-        GET_PROFILE: "/api/auth/profile",
+        REGISTER: `${BASEURL}/api/auth/register`,
+        LOGIN: `${BASEURL}/api/auth/login`,
+        GET_PROFILE: `${BASEURL}/api/auth/profile`,
     },
     TASK: {
-        GET_ALL: "/api/task",
-        CREATE: "/api/task",
-        GET_SINGLE: (id) => `/api/task/${id}`,
-        UPDATE: (id) => `/api/task/${id}`,
-        DELETE: (id) => `/api/task/${id}`,
-        GET_RECENT: "/api/task/recent", // 👈 Added this
+        GET_ALL: `${BASEURL}/api/task`,
+        CREATE: `${BASEURL}/api/task`,
+        GET_SINGLE: (id) => `${BASEURL}/api/task/${id}`,
+        UPDATE: (id) => `${BASEURL}/api/task/${id}`,
+        DELETE: (id) => `${BASEURL}/api/task/${id}`,
+        GET_RECENT: `${BASEURL}/api/task/recent`,
     }
 };
