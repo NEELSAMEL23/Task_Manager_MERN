@@ -8,7 +8,6 @@ Easily register, log in, manage tasks, and track recent activity — all with a 
 <p align="center">
   <a href="https://task-manager-mern-flame.vercel.app"><img src="https://img.shields.io/badge/Frontend-Live%20Demo-blue?style=for-the-badge&logo=react" alt="Live Demo"></a>
   <a href="https://task-manager-mern-a90b.onrender.com"><img src="https://img.shields.io/badge/Backend-Live%20API-green?style=for-the-badge&logo=node.js" alt="Live API"></a>
-  <img src="https://img.shields.io/badge/License-MIT-orange?style=for-the-badge">
 </p>
 
 ---
