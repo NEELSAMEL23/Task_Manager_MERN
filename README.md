@@ -1,111 +1,112 @@
-# 📝 Task Manager (MERN Stack - Frontend)
+<h1 align="center">📝 Task Manager (MERN Stack)</h1>
 
-A responsive **Task Manager** frontend built with **React** and **Tailwind CSS**, designed for the MERN stack.  
-This application allows users to **register, log in, create, edit, and delete tasks** with a clean and modern UI.
+<p align="center">
+A full-stack <b>Task Manager</b> built with <b>MongoDB, Express.js, React, and Node.js</b>.<br>
+Easily register, log in, manage tasks, and track recent activity — all with a clean, responsive UI.
+</p>
+
+<p align="center">
+  <a href="https://task-manager-mern-flame.vercel.app"><img src="https://img.shields.io/badge/Frontend-Live%20Demo-blue?style=for-the-badge&logo=react" alt="Live Demo"></a>
+  <a href="https://task-manager-mern-a90b.onrender.com"><img src="https://img.shields.io/badge/Backend-Live%20API-green?style=for-the-badge&logo=node.js" alt="Live API"></a>
+  <img src="https://img.shields.io/badge/License-MIT-orange?style=for-the-badge">
+</p>
 
 ---
-## 🌐 Live Demo
-
-[🚀 **Try the Live App**](https://task-manager-mern-flame.vercel.app)  
-
 
 ## 🚀 Features
 
-- 🔐 **User Authentication** — Register, Login, and Logout functionality.
-- 🗂 **Task Management** — Create, Update, Delete, and View tasks.
-- 📅 **Recent Tasks** — View your most recently added tasks.
-- 🔍 **Search & Filters** — Easily find and organize tasks.
-- 📱 **Responsive Design** — Works on mobile, tablet, and desktop.
-- ⚡ **Axios API Integration** — Uses a centralized Axios instance for API calls.
-- 🛡 **Protected Routes** — Restricts access to authenticated users.
+### **Frontend**
+- 🔐 **User Authentication** — Register, Login, and Logout.
+- 🗂 **Task Management** — Create, Edit, Delete, and View tasks.
+- 📅 **Recent Tasks** — See the latest added tasks instantly.
+- 🔍 **Search & Filters** — Quickly find specific tasks.
+- 📱 **Responsive** — Optimized for mobile, tablet, and desktop.
+- 🛡 **Protected Routes** — Accessible only to logged-in users.
+
+### **Backend**
+- 🗄 **REST API** with Express.js.
+- 🛢 **MongoDB** for persistent data storage.
+- 🔑 **JWT Authentication** & **bcryptjs** password hashing.
+- 🛡 **Middleware-based Authorization**.
+- ⚠ **Error Handling Middleware**.
 
 ---
 
 ## 🛠 Tech Stack
 
-**Frontend**
-- React (with Hooks & Context API)
-- Tailwind CSS
-- Axios (API calls)
-- React Router DOM (Routing)
-
-**Backend** 
-- Node.js
-- Express.js
-- MongoDB + Mongoose
-- JWT Authentication
+| **Frontend** | **Backend** |
+|--------------|-------------|
+| React (Hooks & Context API) | Node.js |
+| Tailwind CSS | Express.js |
+| Axios | MongoDB + Mongoose |
+| React Router DOM | JWT Authentication |
+|  | bcryptjs, dotenv, cors |
 
 ---
 
 ## 📂 Folder Structure
 
-src/
+```plaintext
+TASK_MANAGER_MERN/
 │
-├── components/ # Reusable UI components
-│ ├── Footer.jsx
-│ ├── Header.jsx
-│ ├── SearchBar.jsx
-│ ├── Sidebar.jsx
-│ ├── TaskCard.jsx
-│ └── TaskFilters.jsx
+├── backend/
+│   ├── config/          # Database connection
+│   ├── controllers/     # Route handlers
+│   ├── middleware/      # Auth & error handling
+│   ├── models/          # Mongoose schemas
+│   ├── routes/          # API routes
+│   ├── .env             # Environment variables
+│   ├── server.js        # Entry point
 │
-├── context/ # Global state
-│ └── AuthContext.jsx
+├── frontend/
+│   ├── components/      # Reusable UI
+│   ├── context/         # Auth context
+│   ├── hooks/           # Custom hooks
+│   ├── pages/           # App pages
+│   ├── services/        # API calls
+│   ├── App.jsx          # Root component
 │
-├── hooks/ # Custom hooks
-│ └── useTasks.js
-│
-├── layout/ # Layout components
-│ └── DashboardLayout.jsx
-│
-├── pages/ # Application pages
-│ ├── Auth/
-│ │ ├── Login.jsx
-│ │ └── Register.jsx
-│ ├── About.jsx
-│ ├── CreateTask.jsx
-│ ├── Dashboard.jsx
-│ ├── EditTask.jsx
-│ └── NotFound.jsx
-│
-├── services/ # API services
-│ ├── apiPaths.js
-│ ├── authService.js
-│ ├── axiosInstance.jsx
-│ └── taskService.js
-│
-├── utils/ # Utility functions
-│
-├── ProtectedRoute.jsx # Route protection component
-└── App.jsx
+└── README.md
+
+⚙ Installation & Setup
+1️⃣ Clone the repository
+git clone https://github.com/your-username/task-manager-mern.git
+cd task-manager-mern
+
+2️⃣ Backend Setup
+cd backend
+npm install
+Create .env in backend/:
+
+PORT=8000
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_secret_key
+Run backend:
+
+# Development (auto restart)
+npm install --save-dev nodemon
+npm run dev
+
+# Production
+npm start
+
+3️⃣ Frontend Setup
+cd frontend
+npm install
+Create .env in frontend/:
 
 
----
+VITE_API_BASE_URL=https://task-manager-mern-a90b.onrender.com
+Run frontend:
 
-## ⚙ Installation & Setup
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/task-manager-mern.git
-   cd task-manager-mern/frontend
-   Install dependencies
-
-
-  npm install
-  Set up environment variables
-  Create a .env file in the frontend folder and configure:
-
-  VITE_API_BASE_URL= https://task-manager-mern-a90b.onrender.com
-  Start the development server
-  npm run dev
+bash
+Copy
+Edit
+npm run dev
 
 🔑 Authentication Flow
-AuthContext stores user and token in localStorage.
-On page load, the profile is fetched if a valid token exists.
-Protected routes are handled via ProtectedRoute.jsx.
+Frontend stores token & user in localStorage via AuthContext.
+On refresh, token is validated and profile fetched.
+Backend uses JWT verification middleware before granting access to protected routes.
 
 📸 Screenshots
-![Screenshot-1](/Screenshot-1.png)
-![Screenshot-2](/Screenshot-2.png)
-
-
