@@ -66,42 +66,88 @@ TASK_MANAGER_MERN/
 │   ├── App.jsx          # Root component
 │
 └── README.md
+```
 
-⚙ Installation & Setup
-1️⃣ Clone the repository
-git clone https://github.com/your-username/task-manager-mern.git
-cd task-manager-mern
 
-2️⃣ Backend Setup
+## ⚙️ Environment Variables
+
+## Frontend
+```
+VITE_API_BASE_URL=https://task-manager-mern-a90b.onrender.com
+```
+
+Create a `.env` file inside the **backend** folder:
+
+##
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
+
+---
+
+## 📦 Installation & Setup
+
+1️⃣ **Clone the repository**
+
+```bash
+git clone https://github.com/NEELSAMEL23/Task_Manager_MERN.git
+cd Task_Manager_MERN
+```
+
+2️⃣ **Install dependencies**
+
+# Backend
 cd backend
 npm install
-Create .env in backend/:
 
-PORT=8000
-MONGO_URI=your_mongodb_uri
-JWT_SECRET=your_secret_key
-Run backend:
-
-# Development (auto restart)
-npm install --save-dev nodemon
-npm run dev
-
-# Production
-npm start
-
-3️⃣ Frontend Setup
-cd frontend
+# Frontend
+```
+cd ../frontend
 npm install
-Create .env in frontend/:
-VITE_API_BASE_URL=https://task-manager-mern-a90b.onrender.com
+```
 
-Run frontend:
+3️⃣ **Run the application**
+
+
+# Backend
+```
+node server.js
+```
+# Frontend
+```
 npm run dev
+```
 
-🔑 Authentication Flow
-Frontend stores token & user in localStorage via AuthContext.
-On refresh, token is validated and profile fetched.
-Backend uses JWT verification middleware before granting access to protected routes.
+---
+
+## 📡 API Endpoints
+
+### Auth Routes
+
+| Method | Endpoint             | Description                | Auth Required |
+| ------ | -------------------- | -------------------------- | ------------- |
+| POST   | `/api/auth/register` | Register a new user        | ❌ No          |
+| POST   | `/api/auth/login`    | Login existing user        | ❌ No          |
+| GET    | `/api/auth/profile`  | Get logged-in user profile | ✅ Yes         |
+
+
+
+### Task Routes (All require authentication)
+
+| Method | Endpoint           | Description                          | Auth Required |
+| ------ | ------------------ | ------------------------------------ | ------------- |
+| GET    | `/api/task/`       | Get all tasks for the logged-in user | ✅ Yes         |
+| GET    | `/api/task/recent` | Get recently added tasks             | ✅ Yes         |
+| GET    | `/api/task/:id`    | Get a single task by ID              | ✅ Yes         |
+| POST   | `/api/task/`       | Create a new task                    | ✅ Yes         |
+| PUT    | `/api/task/:id`    | Update an existing task              | ✅ Yes         |
+| DELETE | `/api/task/:id`    | Delete a task                        | ✅ Yes         |
+
+
+
+<p align="center">Made with ❤️ using the MERN Stack</p> ``
 
 
 
